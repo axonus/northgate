@@ -1,0 +1,72 @@
+#page-nav{
+	width:320px;
+	font-family:'Helvetica Neue',tahoma;
+}
+	#page-nav .content{
+		
+	}
+		#nav-main {
+			overflow:hidden;
+		}
+			#nav-main li{
+				float:left;
+				overflow:hidden;
+			}
+			#nav-main li.first{
+				
+			}
+				#nav-main li a{
+					display:block;
+					width:64px;
+					height:50px;
+					background:transparent url(../img/bg-nav.jpg?ver=1001) no-repeat 0 0;
+					float:left;
+				}
+				#nav-main li.selected a,
+				#nav-main li a:active{
+					background-position:0 -50px;
+				}
+					#nav-main li a .icon-wrapper{
+						height:36px;
+						float:left;
+						width:100%;
+					}
+						#nav-main li a i{
+							display:block;
+							width:28px;
+							height:23px;
+							margin:6px auto 0;
+							background:transparent url(../img/sprite-nav.png?ver=1001) no-repeat 0 0;
+						}
+						#nav-main li#nav-videos a i{
+							width:29px;
+							height:28px;
+							background-position:0 -28px;
+							margin-top:6px;
+						}
+						#nav-main li#nav-stores a i{
+							width:20px;
+							height:29px;
+							background-position:0 -63px;
+							margin-top:6px;
+						}
+						#nav-main li#nav-charity a i{
+							width:30px;
+							height:28px;
+							background-position:0 -97px;
+							margin-top:7px;
+						}
+						#nav-main li#nav-facebook a i{
+							width:12px;
+							height:36px;
+							background-position:0 -130px;
+							margin-top:7px;
+						}
+					#nav-main li a span{
+						display:block;
+						text-align:center;
+						font-size:12px;
+						line-height: 13px;
+						color:#fff;
+					}
+

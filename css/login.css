@@ -1,0 +1,268 @@
+
+		
+			#mobilenumber{
+				margin-top:0;
+			}
+			#form-login{
+				margin-top:20px;
+			}
+			.form-invalid{
+				1outline:1px solid red;
+				
+			}
+			#form-login input{
+				clear:both;
+				width:100%;
+				border-color:#a29b8a;
+				padding:14px 18px;
+				padding:9px 13px;
+				color:#929292;
+				border-radius: 14px;
+				font-size: 24px;
+			}
+			#fieldset-submit p .ui-btn-inner{
+				clear:both;
+				margin-top:1px;
+				
+				border-color:#c0af9f;
+				border-radius: 15px;
+					background:none;
+					
+					background:lightgray;
+					padding:13px 0;
+					border-radius: 14px;
+					font-size: 25px;
+					white-space: nowrap;
+					font-weight: normal;
+					color:gray;
+				}
+				#form-login.form-valid #fieldset-submit p .ui-btn-inner{
+					background:#5f412b;
+					color:#e6d5c4;
+				}
+				#form-login #fieldset-submit.disabled-true input{
+					cursor:default;
+				}
+				
+				 
+				#form-login.form-invalid #fieldset-submit p .ui-btn-inner{
+					opacity:0.4;
+				}
+				#fieldset-submit p div{
+					background: none;
+					width: 100%;
+					border: none;
+					box-shadow: none;
+				}
+				
+				.fieldset-radio-checkbox{
+					overflow:hidden;
+					overflow:visible;
+				}
+					.fieldset-radio-checkbox legend,
+					.fieldset-radio-checkbox .ui-controlgroup-label,
+					.fieldset-radio-checkbox .ui-controlgroup-controls{
+						clear:both;
+						float:left;
+						width: 100%;
+					}
+					.fieldset-radio-checkbox .ui-btn-text{
+						font-size:12px;
+						font-size:24px;
+						font-weight:normal;
+						color:#a9a9a9;
+					}
+				
+				#fieldset-home input,
+				#fieldset-home #state,
+				#fieldset-home .ui-select{
+					margin-bottom:10px;	
+				}
+				#fieldset-home{
+					display:none;	
+				}
+				#fieldset-home .ui-select{
+					width: 100%;
+				}
+					#fieldset-home .ui-select div{
+						background:#fff;
+						box-shadow: none;
+						border: 1px solid #a29b8a;
+						border-radius: 13px;
+					}
+						#fieldset-home .ui-select div .ui-btn-inner{
+							padding-left:0;
+							padding:0;
+						}
+							#fieldset-home .ui-select div .ui-btn-inner .ui-btn-text{
+								text-align:left;
+								padding:9px 13px;
+								color:#929292;
+								color:#a9a9a9;
+								border-radius: 14px;
+								font-size: 24px;
+								font-weight:normal;
+							}	
+					#fieldset-home .ui-select div.ui-btn-corner-all{
+						border-radius: 14px;
+						box-shadow: none;
+						box-shadow:inset 0 1px 4px rgba(0,0,0,.2);
+						border-color: #aaa;
+					}
+						#fieldset-home .ui-select .ui-btn-corner-all .ui-btn-corner-all{
+							padding-top: 2px;
+							padding-bottom: 2px;
+						}
+				.ui-shadow-inset{
+					
+				}
+				
+				
+.ui-checkbox .ui-btn-icon-left .ui-icon, .ui-radio .ui-btn-icon-left .ui-icon{
+	left:5px;
+	visibility1:hidden;
+}
+
+.ui-checkbox .ui-btn-icon-left .ui-btn-inner, .ui-radio .ui-btn-icon-left .ui-btn-inner{
+	padding-left:30px;
+	padding-left:15px;
+	
+	padding-left: 35px;
+	padding-right: 0;	
+}
+
+.fieldset-radio-checkbox .ui-radio-on{
+	/*
+	background:none;
+	background:#e0e0e0;
+	background:#adadad;
+	*/
+}
+
+.fieldset-radio-checkbox .ui-radio-on .ui-btn-text{
+	
+}
+
+
+input:focus:invalid {
+  /* insert your own styles for invalid form input */
+}
+input:required.field-valid{
+  /* insert your own styles for valid form input */
+  background-image: url(../img/valid.png?ver=1001);
+  background-position: right 12px;
+  background-repeat: no-repeat;
+}
+input:required.field-invalid{
+  background-image: url(../img/invalid.png?ver=1001);
+  background-position: right 18px;
+  background-repeat: no-repeat;
+}
+
+input:required{
+  background-image: url(../img/required.png?ver=1001);
+  background-position: right 17px;
+  background-repeat: no-repeat;
+}
+
+#content-header{
+padding:0;	
+}
+
+#promo-container{
+	position:relative;
+	margin-top:20px;
+	text-align: center;
+}
+#promo-video1{
+    display: block;
+    outline: ;
+    height: 30px;
+    width: auto;
+    color:#929292;
+    top: 0;
+    left: 0;
+    background: #fff;
+    z-index: 0;
+    
+    
+    
+    
+	font-size: 24px;
+	padding:11px 13px 7px;
+	min-width: .75em;
+	display: block;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	zoom: 1;
+	border-radius:16px;
+	text-align:center;
+	box-shadow: 0 1px 4px rgba(0,0,0,.3);
+	
+}
+#youtube-promo1{
+	width: 100%;
+	height:30px;
+	z-index: 99999;
+	position: absolute;
+	top: 0;
+    left: 0;
+    opacity: 0;	
+}
+
+#btn-submit{
+	clear: both;
+	margin-top: 1px;
+	border-color: #c0af9f;
+	background: #5f412b;
+	padding: 9px 0;
+	border-radius: 14px;
+	font-size: 25px;
+	white-space: nowrap;
+	font-weight: normal;
+	color: #e6d5c4;
+	display: block;
+	text-align: center;
+}
+#form-login.form-invalid #btn-submit{
+	background:lightgray;
+	color:gray;
+}
+#error-messages{
+	padding:10px 5px 0;
+	margin:0;
+}
+#error-messages span{
+	text-align:center;
+	display:none;
+	color:red;
+	font-size:14px;
+}
+#error-messages.error-global span#error-global,
+#error-messages.error-phone-mismatch span#error-phone-mismatch{
+	display:block;	
+}
+#fieldset-home{display:block2;}
+#address-email,
+#address-mailing{
+	margin-top:20px;	
+}
+
+#address-mailing{
+	display:none;
+}
+
+#login-footer{
+	clear:both;
+}
+#login-footer img{
+	clear:both;
+	display:block;
+	margin-bottom:10px;
+}
+#login-footer .copyright{
+	clear:both;
+	font-size:13px;
+	display:block;	
+}

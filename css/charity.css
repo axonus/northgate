@@ -1,0 +1,40 @@
+.page-content{
+	padding:20px;
+overflow:hidden;	
+}
+.page-content ul{
+	background1:pink;
+	overflow:hidden;
+	width:95%;
+}
+.page-content ul li{
+	margin-top:30px;
+	overflow:hidden;
+	background1:green;
+	display:block;
+	clear:both;
+	float:left;
+}
+.page-content li.first{
+	margin-top:0px;
+}
+.page-content li .charity-intro{
+	background1:yellow;
+	clear:both;	
+	margin-top:10px;
+	float:left;
+	display:block;
+}
+.page-content li img{
+	display:block;
+	clear:both;	
+	margin:10px 0;
+	float:left;
+}
+.page-content li a{
+	clear:both;	
+	background1:yellow;
+	margin:5px 0;
+	float:left;
+	display:block;
+}
