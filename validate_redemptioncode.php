@@ -7,7 +7,8 @@
 	showHeader();
 ?>
 
-	<TR><TD><CENTER>Enter the ticket redemption code to validate:</CENTER></TD></TR>
+<!--	<TR><TD><CENTER>Enter the ticket redemption code to validate:</CENTER></TD></TR>-->
+	<TR><TD><CENTER>Enter the ticket redemption code and customer phone number to validate:</CENTER></TD></TR>
 	<TR HEIGHT=5><TD></TR></TD>
 	<TR>
 		<TD>
@@ -19,6 +20,10 @@
 						<TR>
 							<TD ALIGN=LEFT VALIGN=TOP>Redemption<BR>Code: </TD>
 							<TD VALIGN=BOTTOM><INPUT TYPE=TEXT SIZE=15 ID=redemption_code NAME=redemption_code VALUE="<?echo $redemption_code;?>"></TD>
+						</TR>
+						<TR>
+							<TD ALIGN=LEFT VALIGN=TOP>Phone<BR>Number: </TD>
+							<TD VALIGN=BOTTOM><INPUT TYPE=TEXT SIZE=15 ID=phonenumber NAME=phonenumber VALUE="<?echo $phonenumber;?>"></TD>
 						</TR>
 						<TR HEIGHT=15><TD>&nbsp;</TD></TR>
 						<TR>

@@ -1,26 +1,31 @@
 #page-nav{
 	width:320px;
 	font-family:'Helvetica Neue',tahoma;
+	clear:both;
 }
 	#page-nav .content{
 		
 	}
 		#nav-main {
+			padding:0;
 			overflow:hidden;
 		}
 			#nav-main li{
 				float:left;
 				overflow:hidden;
+				min-width:64px;
 			}
 			#nav-main li.first{
 				
 			}
 				#nav-main li a{
 					display:block;
+					min-width:64px;
 					width:64px;
 					height:50px;
 					background:transparent url(../img/bg-nav.jpg?ver=1001) no-repeat 0 0;
 					float:left;
+					text-decoration:none;
 				}
 				#nav-main li.selected a,
 				#nav-main li a:active{
@@ -68,5 +73,8 @@
 						font-size:12px;
 						line-height: 13px;
 						color:#fff;
+						font-weight:normal;
+						font-family:'Helvetica Neue',tahoma;
+						text-shadow:none;
 					}
 

@@ -1,0 +1,20 @@
+#homePage{
+	
+}
+
+#homePage .ui-bar-b {
+	background-image:none;
+	background-color:tan;
+	display:none;
+}
+
+.ui-page .ui-header{
+	background:tan;
+	padding:8px 0 0 0;
+	font-size:20px;
+}
+
+.ui-btn-active{
+	background:#f9d29f;
+
+}

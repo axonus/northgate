@@ -23,10 +23,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	  <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 
-	  <link href="css/base.css?ver=1001" media="screen" rel="stylesheet" type="text/css" />
-	  <link href="css/nav.css?ver=1001" media="screen" rel="stylesheet" type="text/css" />
-	  <style>
-	  </style>
+	  <link href="css/base.css?ver=<?=time();?>" media="screen" rel="stylesheet" type="text/css" />
+	  <link href="css/nav.css?ver=<?=time();?>" media="screen" rel="stylesheet" type="text/css" />
+		<?
+			if(isset($_REQUEST['android']) && $_REQUEST['android']=='true'){
+				//echo('<link href="css/nav-android.css?ver='.time().'" media="screen" rel="stylesheet" type="text/css" />');
+			}
+			echo '<script type="text/javascript">var languageVal = "'.$language.'";</script>'."\n";
+		?>
 	</head>
   <body>
 	<div data-role="page" id="page-nav" class="page-nav">
@@ -77,7 +81,7 @@
 	</div>
 
 
-	<script src="js/nav.js?ver=1001"></script>
+	<script src="js/nav.js?ver=<?=time()?>"></script>
   </body>
 </html>
 

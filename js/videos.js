@@ -1,7 +1,7 @@
 var Northgate = window.Northgate || {}; Northgate.Videos = Northgate.Videos || {};
 Northgate.Videos = {
     init: function(){
-    	console.log('Videos init');
+    	//console.log('Videos init');
     	Northgate.Videos.setupHandlers();
     	Northgate.Videos.setupFeed();
     },
@@ -9,7 +9,7 @@ Northgate.Videos = {
     	
     },
     setupFeed: function(){
-    	console.log('setupFeed');
+    	//console.log('setupFeed');
     	var url = 'proxy.xml';
     	if(window.location.href.indexOf('northgate') > -1) {
     		url = 'proxy.php';
@@ -29,11 +29,11 @@ Northgate.Videos = {
 
     },
     handleSuccess: function(xml){
-		console.log('handleSuccess');
+		//console.log('handleSuccess');
 		var $list = $('#video-list');
 		var html = '';
 		$(xml).find('entry').each(function(index,entry){
-			console.log(index, entry);
+			//console.log(index, entry);
 			html += Northgate.Videos.buildItemHtml(index, entry);
 			
 		});
@@ -60,41 +60,81 @@ Northgate.Videos = {
     	var secPerDay = 86400000;
     	var diffSec = today - publishDate;
     	var dayDiff = Math.floor(diffSec/secPerDay);
-    	
+    	//console.log(views);
+    	var viewTextSuffix = 'views';
     	var publishText = '';
-    	if(dayDiff==0){
-    		publishText = 'Today';
-    	}
-    	else if(dayDiff==1){
-    		publishText = 'Yesterday';
-    	}
-    	else if(dayDiff<7){
-    		publishText = dayDiff + ' days ago';
-    	}
-    	else if(dayDiff<14){
-    		publishText = '1 week ago';
-    	}
-    	else if(dayDiff<21){
-    		publishText = '2 weeks ago';
-    	}
-    	else if(dayDiff<28){
-    		publishText = '3 weeks ago';
-    	}
-    	else if(dayDiff<30){
-    		publishText = '4 weeks ago';
-    	}
-    	else if(dayDiff<60){
-    		publishText = '1 month ago';
-    	}
-    	else if(dayDiff<90){
-    		publishText = '2 months ago';
-    	}
-    	else if(dayDiff<120){
-    		publishText = '3 months ago';
+    	if(languageVal == 'es'){
+    		viewTextSuffix = 'visitas';
+			if(dayDiff==0){
+				publishText = 'Hoy';
+			}
+			else if(dayDiff==1){
+				publishText = 'Ayer';
+			}
+			else if(dayDiff<7){
+				publishText = dayDiff + ' Dias';
+			}
+			else if(dayDiff<14){
+				publishText = '1 semana';
+			}
+			else if(dayDiff<21){
+				publishText = '2 Semanas';
+			}
+			else if(dayDiff<28){
+				publishText = '3 Semanas';
+			}
+			else if(dayDiff<30){
+				publishText = '4 Semanas';
+			}
+			else if(dayDiff<60){
+				publishText = '1 Mes';
+			}
+			else if(dayDiff<90){
+				publishText = '2 Meses';
+			}
+			else if(dayDiff<120){
+				publishText = '3 Meses';
+			}
+			else{
+				publishText = 'Mas de Tres Meses';
+			}
     	}
     	else{
-			publishText = 'More than 3 months ago!';
+			if(dayDiff==0){
+				publishText = 'Today';
+			}
+			else if(dayDiff==1){
+				publishText = 'Yesterday';
+			}
+			else if(dayDiff<7){
+				publishText = dayDiff + ' days ago';
+			}
+			else if(dayDiff<14){
+				publishText = '1 week ago';
+			}
+			else if(dayDiff<21){
+				publishText = '2 weeks ago';
+			}
+			else if(dayDiff<28){
+				publishText = '3 weeks ago';
+			}
+			else if(dayDiff<30){
+				publishText = '4 weeks ago';
+			}
+			else if(dayDiff<60){
+				publishText = '1 month ago';
+			}
+			else if(dayDiff<90){
+				publishText = '2 months ago';
+			}
+			else if(dayDiff<120){
+				publishText = '3 months ago';
+			}
+			else{
+				publishText = 'More than 3 months ago';
+			}
 		}
+		var viewText = views + ' ' + viewTextSuffix;
     	var embedHtml = '<iframe class="youtube-player" type="text/html" width="93" height="93" src="http://www.youtube.com/embed/' + videoId + '?controls=0&showinfo=0&showsearch=0&modestbranding=1" frameborder="0"></iframe>';
 
 		listItem = '';
@@ -103,13 +143,13 @@ Northgate.Videos = {
 		listItem += '			<div class="video-details">';
 		listItem += '				<h3 class="video-title">' + title + '</h3>';
 		listItem += '				<span class="video-description">' + content + '</span>';
-		listItem += '				<span class="video-views">' + views + ' views</span>';
+		listItem += '				<span class="video-views">' + viewText + '</span>';
 		listItem += '				<span class="video-date">' + publishText + '</span>';
 		listItem += '			</div>';
 		listItem += '		</li>';
 
 
-    	console.log(listItem);
+    	//console.log(listItem);
     	return listItem
 	},
     

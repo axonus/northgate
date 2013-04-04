@@ -3,6 +3,7 @@ body,html{
 	height:100%;
 	color:#8b8a8a;
 	font-size:100%;
+	font-family:Helvetica,Arial,sans-serif;
 }
 a{
 	cursor:pointer;
@@ -14,7 +15,7 @@ input.ui-input-text, textarea.ui-input-text,
 
 
 
-.ui-page {
+.ui-page,.page-content {
 	background:none;
 	background:url(../img/bg-noisyWood2.jpg?ver=1001) left top repeat;
 }
@@ -42,8 +43,10 @@ input.ui-input-text, textarea.ui-input-text,
 			font-weight:bold;
 			color:#61371F;
 			line-height:1.3em;
+			text-shadow:0 1px 0 #fff;
 		}
 		p{
+			text-shadow:0 1px 0 #fff;
 			clear:both;
 			line-height:1.3em;
 			margin-top:7px;
@@ -60,3 +63,18 @@ input.ui-input-text, textarea.ui-input-text,
 				opacity:0.5;
 			}
 		
+			
+			
+.role-content{
+	padding:15px;
+}
+
+
+
+
+body.ui-mobile-viewport, div.ui-mobile-viewport{
+	padding:0;
+}
+div.ui-mobile-viewport{
+	overflow:hidden;
+}

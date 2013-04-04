@@ -46,10 +46,33 @@
 					float:right;
 					padding-right:11px;
 				}
-		p#last-trans{
-			font-size:14px;
-			color:#847360;
-		}
+
+				
+			#summary-transactions{
+				
+			}
+				#summary-transactions li{
+					overflow:hidden;
+				}
+					#summary-transactions li p{
+						font-size: 14px;
+						color: #847360;
+						float: left;
+					}
+					#summary-transactions li p.title{
+						
+					}
+					#summary-transactions li p.details{
+						clear:none;
+						margin-left:10px;
+					}
+						#summary-transactions li p span{
+							clear:both;
+							display:block;
+						}
+				
+				
+				
 		
 .content-brands.ui-content{
 	padding:0;
@@ -62,7 +85,7 @@
 	.content-brands ul{
 		overflow:hidden;
 		min-width:310px;
-		margin-top:20px;
+		margin-top:10px;
 	}	
 		.content-brands ul li{
 			float:left;
@@ -126,7 +149,7 @@
 
 				
 .content-brands ul{
-	margin:20px auto;
+	margin:10px auto 20px;
 	overflow:hidden;
 }
 				
@@ -230,5 +253,35 @@
 
 .imagery img{
 	width:90%;
-max-width:640px;	
+	max-width:640px;	
+}
+
+
+
+.content-brands{
+	
+}
+.content-brands p{
+	margin:0 0 15px 0;
+}
+.content-brands p.title-brands{
+	margin:20px 0 0 0;
+}
+
+#btn-logout{
+clear: both;
+margin-top: 1px;
+border-color: #c0af9f;
+background: #5f412b;
+padding: 9px 0;
+border-radius: 14px;
+font-size: 25px;
+white-space: nowrap;
+font-weight: normal;
+color: #e6d5c4;
+display: block;
+text-align: center;
+font-family: Helvetica,Arial,sans-serif;
+text-shadow: 0 1px 0 #fff;
+text-decoration:none;
 }

@@ -9,6 +9,24 @@
 		print_r($array);
 		?></PRE><?
 	}
+
+////
+////
+	function sendOptInConfirmationTxtMsg($mobileNumber) {
+		//$cmd = 'curl -X POST --header "Content-Type:text/xml" -d \'<message><description>description</description><text>'.$msg.'</text><filters><mobile_phones><mobile_phone>'.$mobileNumber.'</mobile_phone></mobile_phones></filters></message>\' http://jon%40frendl.com:8989phph@www.vibescm.com/api/subscription_campaigns/495390/send_alert.xml';
+		$cmd = 'curl -X POST --header "Content-Type:text/xml" -d \'<subscription><user><mobile-phone>'.$mobileNumber.'</mobile-phone></user></subscription>\' http://jon%40frendl.com:8989phph@www.vibescm.com/api/subscription_campaigns/495390/subscriptions.xml';
+		//echo "cmd = .$cmd.<BR>";
+		//echo exec($cmd);
+		exec($cmd);
+	}
+////
+////
+
+////
+////
+//	function sendMsg() {
+//		echo exec('whoami');
+//	}
 ////
 ////
 	function showHeader() {

@@ -1,4 +1,6 @@
-
+#loginPage{
+	
+}
 		
 			#mobilenumber{
 				margin-top:0;
@@ -255,14 +257,157 @@ padding:0;
 
 #login-footer{
 	clear:both;
+	padding:20px;
 }
 #login-footer img{
 	clear:both;
 	display:block;
-	margin-bottom:10px;
+	margin:0 auto 10px;
+}
+#login-footer img#logo-unilever{
+	margin:25px auto 25px;
 }
 #login-footer .copyright{
 	clear:both;
 	font-size:13px;
-	display:block;	
+	display:block;
+	text-align:center;
 }
+#loginPage .imagery{
+	text-align: center;
+}
+#loginPage .imagery img{
+	width:100%;
+	max-width:640px;
+	margin:0 auto;
+}
+#loginPage{
+}
+
+input{
+	box-sizing:border-box;
+-webkit-box-shadow: inset 0 1px 4px rgba(0,0,0,.2);
+box-shadow: inset 0 1px 4px rgba(0,0,0,.2);
+-webkit-background-clip: padding-box;
+background-clip: padding-box;
+border: 1px solid #aaa;
+text-shadow: 0 1px 0 #fff;
+background: #f9f9f9;
+
+	
+}
+
+.fieldcontain{
+border-width: 0;
+padding: 0;
+margin: 1em 0;
+position:relative;
+max-width: 100%;
+display: block;
+clear: both;
+}
+
+#form-login .fieldcontain legend{
+	clear: both;
+float: left;
+width: 100%;
+vertical-align: top;
+display: inline-block;
+margin: 0 2% 0 0;
+font-size: 16px;
+line-height: 1.4;
+font-weight: normal;
+padding:0;
+color: #333;
+text-shadow: 0 1px 0 #fff;
+}
+#form-login .fieldcontain input{
+	padding:12px 13px 11px;
+	
+}
+#form-login .input-radio-checkbox{
+	overflow: hidden;
+	border:1px solid #ccc;
+	border-radius: 0;
+	padding:0;
+
+	box-sizing: border-box;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	border: 1px solid #aaa;
+	text-shadow: 0 1px 0 #fff;
+	background: #f9f9f9;
+
+}
+#form-login .input-radio-checkbox.order-first{
+	border-radius:0.6em 0.6em 0 0;
+	border-bottom:none;
+}
+#form-login .input-radio-checkbox.order-last{
+	border-radius:0 0 0.6em 0.6em;
+}
+#form-login .input-radio-checkbox.order-single{
+	border-radius:0.6em;
+}
+	#form-login .input-radio-checkbox input{
+float: left;
+width: 29px;
+height: 48px;
+margin-top: 0;
+	}
+	#form-login .input-radio-checkbox label{
+float: left;
+font-size: 24px;
+font-weight: normal;
+color: #a9a9a9;
+text-shadow: 0 1px 0 #fff;
+padding:10px 5px 10px 6px;
+width: 378px;
+	}
+
+
+	
+	#state{
+		width:100%;
+		clear: both;
+		width: 100%;
+		border-color: #a29b8a;
+		padding: 14px 18px;
+		padding: 9px 13px;
+		color: #929292;
+		border-radius: 0.6em;
+		font-size: 24px;
+	}
+	
+	
+	
+			.col1{
+				overflow:hidden;	
+			}
+			#ticket-details{
+				margin:10px 0;
+				overflow:hidden;
+				clear:both;
+			}
+				#ticket-details li{
+					margin-bottom:5px;
+					clear:both;
+				}
+				#ticket-details li.header{
+					margin-bottom:10px;
+				}
+				#ticket-details li.first{
+					overflow:hidden;
+				}
+					#ticket-details li span{
+						float:left;
+					}
+					#ticket-details li span.item-number{
+						font-weight:bold;
+						width:25px;
+					}
+					#ticket-details li span.item-text{
+						width:90%;
+					}
+					
+					

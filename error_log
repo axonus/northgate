@@ -1,0 +1,4 @@
+[26-Feb-2013 09:23:51 UTC] PHP Warning:  file_get_contents(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/thomas/public_html/downloadtlogs.php on line 9
+[26-Feb-2013 09:23:51 UTC] PHP Warning:  file_get_contents(http://www.magnipets.com/tlogs/TLog-2012-02-07.xml): failed to open stream: php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/thomas/public_html/downloadtlogs.php on line 9
+[26-Feb-2013 09:26:00 UTC] PHP Warning:  file_get_contents(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/thomas/public_html/downloadtlogs.php on line 9
+[26-Feb-2013 09:26:00 UTC] PHP Warning:  file_get_contents(http://www.magnipets.com/tlogs/TLog-2012-02-07.xml): failed to open stream: php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/thomas/public_html/downloadtlogs.php on line 9

@@ -1,11 +1,94 @@
 var Northgate = window.Northgate || {}; Northgate.Login = Northgate.Login || {};
 Northgate.Login = {
     init: function(){
-    	console.log('Login init');
+    	//console.log('Login2 init');
+    	//console.log($('#login-page'));
+    	//$('#login-page').css('height','400px').hide();
     	Northgate.Login.setupHandlers();
+    	//Northgate.Login.setupPlaceholderText();
     	//Northgate.Login.setupValidation();
     	Northgate.Login.checkValidation('init');
+    	//Northgate.Login.checkFrameStatus();
     },
+    
+    setupPlaceholderText: function(){
+		//console.log('setupPlaceholderText');
+		$('input[placeholderText]').each(function(index,item){
+			var $this = $(item);
+			var placeholderText = $this.attr('placeholderText');
+			if($this.val()==''){
+				$this.val(placeholderText);
+			}
+			//console.log($this.hasAttr('placeholderText'));
+			//$this.css('outline','1px solid red');
+			$this.on('focus',function(){
+				Northgate.Login.handleFocus($this);
+			});
+			$this.on('blur',function(){
+				Northgate.Login.handleBlur($this);
+			});
+		})
+		
+    },
+    
+    handleFocus: function($this){
+    	//console.log('handleFocus');
+    	var $this = $this;
+    	var placeholderText = $this.attr('placeholderText');
+    	var currentVal = $this.val();
+    	//console.log('placeholderText',placeholderText);
+    	//console.log('currentVal',currentVal);
+    	if(placeholderText==currentVal){
+    		//console.log('empty');
+    		$this.val('');
+    	}
+    	else{
+    		//console.log('not empty');	
+    	}
+    },
+    
+    handleBlur: function($this){
+    	//console.log('handleBlur');
+    	var $this = $this;
+    	var placeholderText = $this.attr('placeholderText');
+    	var currentVal = $this.val();
+    	//console.log('placeholderText',placeholderText);
+    	//console.log('currentVal',currentVal);
+    	if(currentVal==''){
+    		//console.log('empty');
+    		$this.val(placeholderText);
+    	}
+    	else{
+    		//console.log('not empty');	
+    	}
+
+    },
+    
+    checkFrameStatus: function(){
+    	//console.log('checkFrameStatus');
+    	if (top.location== self.location) { 
+		  // no frame
+		  //console.log('no frame');
+		  
+		} else { 
+		  //frame
+		  //console.log('in frame');
+		  Northgate.Login.sizeContent();
+		}
+	},
+	
+   sizeContent: function(){
+    	//console.log('sizeContent');
+    	var $body = $('body');
+    	var $header = $('#frame-header');
+    	var $content = $('#loginPage');
+    	var $nav = $('#frame-nav');
+    	var bodyHeight = $body.innerHeight();
+    	
+    	contentHeight = 200;
+    	$content.css('height',contentHeight+'px');
+   },
+
     setupHandlers: function(){
     	$('#fieldset-phone-type input').on('change',function(){
 			Northgate.Login.handleRadioChangePhone($(this));
@@ -19,15 +102,17 @@ Northgate.Login = {
 			return false;
 		});
 		
-		$('#mobilenumber, #mobilenumber2').on('blur',function(){
+		$('#mobilenumber, #mobilenumber2').on('keyup',function(){
+			//alert('a');
 			Northgate.Login.checkValidation('field');
 		});
-		$('#email').on('blur',function(){
+		$('#email').on('keyup',function(){
+			//alert('b');
 			Northgate.Login.checkValidation('email');
 		});
     },
     checkValidation: function(type){
-    	console.log('checkValidation');
+    	//console.log('checkValidation');
     	var $form = $('#form-login');
     	$form.attr('class','');
     	var $addressTypeButton = $('#address-type');
@@ -42,10 +127,10 @@ Northgate.Login = {
     },
 
     checkEmail: function(type){
-    	console.log('checkEmail');
+    	//console.log('checkEmail');
     	var $phoneType1 = $('#phone-type-1');
     	var $phoneType2 = $('#phone-type-2');
-    	console.log($phoneType2.prop('checked'));
+    	//console.log($phoneType2.prop('checked'));
     	if($phoneType2.prop('checked')){
     		Northgate.Login.verifyEmail(type);
     	}
@@ -53,13 +138,13 @@ Northgate.Login = {
     },
 
     verifyEmail: function(type){
-    	console.log('verifyEmail: ' + type);
+    	//console.log('verifyEmail: ' + type);
     	var $form = $('#form-login');
     	var $email = $('#email');
     	var emailVal = $email.val();
     	var isEmailValid = Northgate.Login.isEmailValid(emailVal);
     	if(emailVal=='' || isEmailValid==false){
-    		console.log('verify IF');
+    		//console.log('verify IF');
     		$form.addClass('form-invalid');
     		if(type!='init'){
     			$email.addClass('field-invalid').removeClass('field-valid');
@@ -72,7 +157,7 @@ Northgate.Login = {
     },
 
     isEmailValid: function(emailVal){
-    	console.log('isEmailValid');
+    	//console.log('isEmailValid');
 		var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
 		if(reg.test(emailVal) == false) {
 			return false;
@@ -83,7 +168,7 @@ Northgate.Login = {
     },
 
     checkPhone: function(){
-    	console.log('checkPhone');
+    	//console.log('checkPhone');
     	var $phone1 = $('#mobilenumber');
     	var $phone2 = $('#mobilenumber2');
     	var phone1Val = $phone1.val();
@@ -95,18 +180,18 @@ Northgate.Login = {
     		$phone2.addClass('field-valid').removeClass('field-invalid');
     	}
 		else if(phone1Val.match(/^\d{10}/)){
-			console.log('if');
+			//console.log('if');
 			if(phone2Val.length==0){
-				console.log('if if');
+				//console.log('if if');
 				$phone1.addClass('field-valid').removeClass('field-invalid');
 				$form.addClass('form-invalid');
 			}
 			else if(phone2Val.length==10 && phone1Val==phone2Val){
-				console.log('if "else if"');
+				//console.log('if "else if"');
 				$phone1.addClass('field-valid').removeClass('field-invalid');
 			}
 			else{
-				console.log('if else');
+				//console.log('if else');
 				$phone1.addClass('field-invalid').removeClass('field-valid');
 				$phone2.addClass('field-invalid').removeClass('field-valid');
 				Northgate.Login.displayError('phone-mismatch');
@@ -114,7 +199,7 @@ Northgate.Login = {
 		}
 		else if(phone2Val.match(/^\d{10}/)){
 			if(phone1Val.length==0){
-				console.log('if if');
+				//console.log('if if');
 				$phone2.addClass('field-valid').removeClass('field-invalid');
 			}
 			else if( phone1Val!=phone2Val ){
@@ -127,7 +212,7 @@ Northgate.Login = {
 			$form.addClass('form-invalid');
 		}
 		else{
-			console.log('else');
+			//console.log('else');
 			$phone1.addClass('field-invalid').removeClass('field-valid');
 		}
     	
@@ -175,14 +260,16 @@ Northgate.Login = {
     handleLoginSubmit: function(){
     	var $form = $('#form-login');
     	if($form.hasClass('form-invalid')){
-    		console.log('form invalid');
+    		//console.log('form invalid');
 			$('#error-messages').addClass('error-global');
     	}
     	else{
-    		console.log('form IS valid');
+    		//console.log('form IS valid');
     		$('#error-messages').removeClass('error-global');
 			var mobileNumber = $('#mobilenumber').val();
-			var actionUrl = 'customersummary.php';
+			var actionUrl = summaryPageUrl;
+			console.log('actionUrl:',actionUrl);
+			console.log('summaryPageUrl:',summaryPageUrl);
 			$form.attr('action',actionUrl).submit();
 		}
     	//$form.submit();

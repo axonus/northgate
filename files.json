@@ -1,0 +1,169 @@
+﻿{
+    "files": [
+        {
+            "source": "img/header.png",
+            "type": "IMAGE",
+            "size": 31.013
+        },
+        {
+            "source": "img/invalid.png",
+            "type": "IMAGE",
+            "size": 3.735
+        },
+        {
+            "source": "img/required.png",
+            "type": "IMAGE",
+            "size": 3.559
+        },
+        {
+            "source": "img/sprite-nav.png",
+            "type": "IMAGE",
+            "size": 3.146
+        },
+        {
+            "source": "img/valid.png",
+            "type": "IMAGE",
+            "size": 3.713
+        },
+        {
+            "source": "img/bg-nav.jpg",
+            "type": "IMAGE",
+            "size": 0.906
+        },
+        {
+            "source": "img/bg-noisyWood2.jpg",
+            "type": "IMAGE",
+            "size": 152.157
+        },
+        {
+            "source": "img/bg-noisyWood.jpg",
+            "type": "IMAGE",
+            "size": 76.066
+        },
+        {
+            "source": "img/bg-wood-repeat2.jpg",
+            "type": "IMAGE",
+            "size": 0.818
+        },
+        {
+            "source": "img/bg-wood-repeat3.jpg",
+            "type": "IMAGE",
+            "size": 0.756
+        },
+        {
+            "source": "img/bg-wood-repeat.jpg",
+            "type": "IMAGE",
+            "size": 0.620
+        },
+        {
+            "source": "img/shopping-list.jpg",
+            "type": "IMAGE",
+            "size": 108.048
+        },
+        {
+            "source": "img/fpo/clipboard.jpg",
+            "type": "IMAGE",
+            "size": 13.995
+        },
+        {
+            "source": "img/fpo/thumbnail1.png",
+            "type": "IMAGE",
+            "size": 23.779
+        },
+
+
+
+
+
+
+
+
+
+
+        {
+            "source": "img/logos/AXE.jpg",
+            "type": "IMAGE",
+            "size": 19.449
+        },
+        {
+            "source": "img/logos/Bertolli.jpg",
+            "type": "IMAGE",
+            "size": 25.083
+        },
+        {
+            "source": "img/logos/Best_Foods.jpg",
+            "type": "IMAGE",
+            "size": 26.307
+        },
+        {
+            "source": "img/logos/Breyers.jpg",
+            "type": "IMAGE",
+            "size": 20.011
+        },
+        {
+            "source": "img/logos/Caress.jpg",
+            "type": "IMAGE",
+            "size": 19.228
+        },
+        {
+            "source": "img/logos/charity-feeding-america.jpg",
+            "type": "IMAGE",
+            "size": 27.948
+        },
+        {
+            "source": "img/logos/charity-olive-crest.jpg",
+            "type": "IMAGE",
+            "size": 24.248
+        },
+        {
+            "source": "img/logos/charity-red-eye.jpg",
+            "type": "IMAGE",
+            "size": 42.175
+        },
+        {
+            "source": "img/logos/Clear.jpg",
+            "type": "IMAGE",
+            "size": 18.827
+        },
+        {
+            "source": "img/logos/con-musica.jpg",
+            "type": "IMAGE",
+            "size": 40.816
+        },
+        {
+            "source": "img/logos/Country_Crock.jpg",
+            "type": "IMAGE",
+            "size": 20.125
+        },
+        {
+            "source": "img/logos/Degree.jpg",
+            "type": "IMAGE",
+            "size": 19.859
+        },
+        {
+            "source": "img/logos/Dove.jpg",
+            "type": "IMAGE",
+            "size": 21.015
+        },
+        {
+            "source": "img/logos/Good_Humor.jpg",
+            "type": "IMAGE",
+            "size": 25.810
+        },
+        {
+            "source": "img/logos/ICBNB.jpg",
+            "type": "IMAGE",
+            "size": 25.201
+        },
+        {
+            "source": "img/logos/Imperial.jpg",
+            "type": "IMAGE",
+            "size": 22.051
+        },
+        {
+            "source": "img/logos/Klondike.jpg",
+            "type": "IMAGE",
+            "size": 21.533
+        }
+    ]
+}

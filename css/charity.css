@@ -1,13 +1,18 @@
+#charityPage{
+	padding:0;
+	overflow:hidden;	
+}
 .page-content{
 	padding:20px;
 overflow:hidden;	
 }
-.page-content ul{
-	background1:pink;
+.page-content ul#charity-info{
 	overflow:hidden;
 	width:95%;
+	padding:20px;
+	clear:both;
 }
-.page-content ul li{
+.page-content ul#charity-info li{
 	margin-top:30px;
 	overflow:hidden;
 	background1:green;
@@ -15,23 +20,23 @@ overflow:hidden;
 	clear:both;
 	float:left;
 }
-.page-content li.first{
+.page-content ul#charity-info li.first{
 	margin-top:0px;
 }
-.page-content li .charity-intro{
+.page-content ul#charity-info li .charity-intro{
 	background1:yellow;
 	clear:both;	
 	margin-top:10px;
 	float:left;
 	display:block;
 }
-.page-content li img{
+.page-content ul#charity-info li img{
 	display:block;
 	clear:both;	
 	margin:10px 0;
 	float:left;
 }
-.page-content li a{
+.page-content ul#charity-info li a{
 	clear:both;	
 	background1:yellow;
 	margin:5px 0;

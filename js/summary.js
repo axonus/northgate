@@ -1,11 +1,12 @@
 var Northgate = window.Northgate || {}; Northgate.Summary = Northgate.Summary || {};
 Northgate.Summary = {
     init: function(){
-    	console.log('Summary init');
+    	//console.log('Summary init');
+    	//alert('init');
     	Northgate.Summary.setupAnimation();    
     },
     setupAnimation: function(){
-    	console.log('setupAnimation');
+    	//console.log('setupAnimation');
 		$.fn.onAvailable = function(fn){
 			var sel = this.selector;
 			var timer;
