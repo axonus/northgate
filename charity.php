@@ -2,20 +2,45 @@
 <?
 	if ($language == "es") {
 		$strPageTextIntro1 = "Esta Promoci"."&oacute;"."n tambi"."&eacute;"."n refleja los valores de Northgate y sus esfuerzos en seguir ayudando a la comunidad Hispana. Northgate esta comprometido en apoyar a las comunidades locales y proveer la m"."&aacute;"."s alta calidad y variedad de productos frescos.";
-		$strPageTextIntro2 = "Como parte de esta promoci"."&oacute;"."n, los que atiendan al concierto de Reyli tendr"."&aacute;"."n la oportunidad de ayudar a dos organizaciones de Caridad- Olive Crest provee ayuda y servicios a niños abusados y Red Eye, es una organizaci"."&oacute;"."n que promueve la ayuda a niños por medio de eventos que recaudan alimento, y ropa para estos pequeños.";
-		$strPageTextOlive = "Desde 1973, Olive Crest ha transformado la vida de más de 60,000 familias de niños abusados y abandonados.";
-		$strPageTextMoreInfo = "Mas información";
-		$strPageTextDonate = "Haz tu donación ahora!";
-		$strPageTextRedEye = "Utiliza tus talentos, creatividad y plataforma de vida para crear un impacto positivo en todos los demás.";
+		$strPageTextIntro2 = "Como parte de esta promoci"."&oacute;"."n, los que atiendan al concierto de Reyli tendr"."&aacute;"."n la oportunidad de ayudar a dos organizaciones de Caridad- Olive Crest provee ayuda y servicios a ni"."&ntilde;"."os abusados y Red Eye, es una organizaci"."&oacute;"."n que promueve la ayuda a ni"."&ntilde;"."os por medio de eventos que recaudan alimento, y ropa para estos peque"."&ntilde;"."os.";
+		$strPageTextMoreInfo = "Mas informaci"."&oacute;"."n";
+		$strPageTextDonate = "Haz tu donaci"."&oacute;"."n ahora!";
+
+		$strAltTextReynoso = "Fundacion Familia Gonz"."&aacute;"."lez Reynoso";
+		$strPageTextReynoso = "La Fundacion Familia Gonz"."&aacute;"."lez Reynoso se cre"."&oacute;"." para continuar nuestra larga historia de retribuir a las comunidades a las que servimos. Cada a"."&ntilde;"."o nuestra fundaci"."&oacute;"."n proporciona alimentos, fondos y otros recursos a nuestras comunidades.";
+		$strUrlLearnMoreReynoso = "http://www.northgatemarkets.com/es-mx/about-northgate/familia-gonzalez-reynoso-foundation/";
+		$strUrlDonateNowReynoso = "https://www.northgatemarkets.com/es-mx/about-northgate/donation-requests/";
+		
+		$strAltTextOliveCrest = "Olive Crest";
+		$strDescriptionOliveCrest = "Desde 1973, Olive Crest ha transformado la vida de m"."&aacute;"."s de 60,000 familias de ni"."&ntilde;"."os abusados y abandonados.";
+		$strUrlLearnMoreOliveCrest = "http://www.olivecrest.org/site/PageServer?pagename=gen_abt_history_mission_values";
+		$strUrlDonateNowOliveCrest = "https://secure2.convio.net/oc/site/Donation?ACTION=SHOW_DONATION_OPTIONS&CAMPAIGN_ID=3461";
+		
+		$strAltTextRedEye = "Red Eye";
+		$strPageTextRedEye = "Utiliza tus talentos, creatividad y plataforma de vida para crear un impacto positivo en todos los dem"."&aacute;"."s.";
+		$strUrlLearnMoreRedEye = "http://www.redeyeinc.org/about";
+		$strUrlDonateNowRedEye = "https://anedot.com/campaigns/c71dc4dec8e/donations/new";
 	}
 	else{
 		$strPageTextIntro1 = "The promotion also backs Northgate's commitment of giving back to the Hispanic community.  Northgate is committed to supporting local neighborhoods and provides high quality fresh foods and a wide assortment of grocery staples to local families.";
 		$strPageTextIntro2 = "As a part of this promotion, attendees of the Reyli concert will have the opportunity to support two charitable organizations-- Olive Crest,  which provides support services to at-risk children and families and  Red Eye, which addresses the needs of the underserved with food and clothing drives and special empowerment events.";
-		$strPageTextOlive = "Since 1973, Olive Crest has transformed the lives of over 60,000 abused, neglected, and at risk children and their families";
 		$strPageTextMoreInfo = "Learn More";
 		$strPageTextDonate = "Donate Now";
-		$strPageTextRedEye = "Utilize your talents, creativity, and life platform to make a positive impact on others";
+
+		$strAltTextReynoso = "Familia Gonzalez Reynoso Foundation";
+		$strPageTextReynoso = "The Familia Gonzalez Reynoso Foundation was established to continue our long history of giving back to the communities we serve. Each year our foundation provides food, funding and other resources to our neighbors.";
+		$strUrlLearnMoreReynoso = "http://www.northgatemarkets.com/en-us/about-northgate/familia-gonzalez-reynoso-foundation/";
+		$strUrlDonateNowReynoso = "https://www.northgatemarkets.com/en-us/about-northgate/donation-requests/";
+
+		$strAltTextOliveCrest = "Olive Crest";
+		$strDescriptionOliveCrest = "Since 1973, Olive Crest has transformed the lives of over 60,000 abused, neglected, and at risk children and their families";
+		$strUrlLearnMoreOliveCrest = "http://www.olivecrest.org/site/PageServer?pagename=gen_abt_history_mission_values";
+		$strUrlDonateNowOliveCrest = "https://secure2.convio.net/oc/site/Donation?ACTION=SHOW_DONATION_OPTIONS&CAMPAIGN_ID=3461";
 		
+		$strAltTextRedEye = "Red Eye";
+		$strPageTextRedEye = "Utilize your talents, creativity, and life platform to make a positive impact on others";
+		$strUrlLearnMoreRedEye = "http://www.redeyeinc.org/about";
+		$strUrlDonateNowRedEye = "https://anedot.com/campaigns/c71dc4dec8e/donations/new";
 	}
 ?>
 
@@ -49,14 +74,19 @@
 			<span class="charity-intro"><?=$strPageTextIntro2?></span>
 		</li>
 		<li>
-			<span class="charity-intro"><?=$strPageTextOlive?></span>
-			<img src="img/logos/charity-olive-tree-logo.png" alt="Olive Crest" />
-			<a href="http://www.olivecrest.org/site/PageServer?pagename=gen_abt_history_mission_values" target="charity"><?=$strPageTextMoreInfo?></a>
+			<span class="charity-intro"><?=$strPageTextReynoso?></span>
+			<img src="img/logos/charity-reynoso-logo.png" alt="<?=$strAltTextReynoso?>" />
+			<a href="<?=$strUrlLearnMoreReynoso?>" target="charity"><?=$strPageTextMoreInfo?></a>
+		</li>
+		<li>
+			<span class="charity-intro"><?=$strDescriptionOliveCrest?></span>
+			<img src="img/logos/charity-olive-tree-logo.png" alt="<?=$strAltTextOliveCrest?>" />
+			<a href="<?=$strUrlLearnMoreOliveCrest?>" target="charity"><?=$strPageTextMoreInfo?></a>
 		</li>
 		<li>
 			<span class="charity-intro"><?=$strPageTextRedEye?></span>
-			<img src="img/logos/charity-redeye-logo.png" alt="Red Eye" />
-			<a href="http://www.redeyeinc.org/about" target="charity"><?=$strPageTextMoreInfo?></a>
+			<img src="img/logos/charity-redeye-logo.png" alt="<?=$strAltTextRedEye?>" />
+			<a href="<?=$strUrlLearnMoreRedEye?>" target="charity"><?=$strPageTextMoreInfo?></a>
 		</li>
 	</ul>
 </div>

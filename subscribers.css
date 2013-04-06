@@ -1,0 +1,27 @@
+﻿subscriptions,subscription,opt-in-at,confirmed-at
+{
+background-color: #ffffff;
+width: 100%;
+}
+user
+{
+display: block;
+margin-bottom: 30pt;
+margin-left: 0;
+}
+email
+{
+color: #FF0000;
+font-size: 20pt;
+}
+first-name,last-name
+{
+color: #0000FF;
+font-size: 20pt;
+}
+mobile-phone,postal-code,verification-hash
+{
+display: block;
+color: #000000;
+margin-left: 20pt;
+}        
