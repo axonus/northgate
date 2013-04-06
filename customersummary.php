@@ -32,6 +32,7 @@
 		$strPageListHeader = "Usa esta lista como ejemplo para comprar tus productos favoritos entre mas de 350 productos participantes.";
 		$strPageBrandsListHeader = "Busque las etiquetas con la imagen de Reyli en estas marcas participantes";
 		$logoutText = "Salir";
+$strCalculating = "Actualizando base de datos...";
 	}
 	else{
 		$strPageHeader = "How close are you to earning two tickets to see Reyli in concert on May 17 at the Honda Center?";
@@ -41,6 +42,7 @@
 		$strPageListHeader = "Here is a sample shopping list of some of the 350 participating products.";
 		$strPageBrandsListHeader = "Look for shelf tags on these participating brands";
 		$logoutText = "Logout";
+$strCalculating = "Refreshing data...";
 	}
 ?>
 <?
@@ -260,6 +262,14 @@ $language
 	}
 
 //echo "\n<BR>Total Spent: $".$totalSpent."<BR>\n";
+
+//$totalSpent /= 2;
+
+//echo "totalspent = ".$totalSpent."\n";
+
+$totalSpent = 0;
+
+
 
 $realTotalSpent = $totalSpent;		// because later we mod $totalSpent by $goal so that the progress bar doesn't go past 100
 
@@ -486,7 +496,18 @@ if($isIframe=="true"){
 					<p class="title"><?=$strPageTextAsOf?></p>
 					<p class="details">
 						<span>
-							<? echo $dateandtime; ?>
+<!--							<? echo $dateandtime; ?>-->
+04-01-2013
+<!--
+<BR>
+<P>
+	<CENTER>
+		<FONT SIZE=5>
+			<?echo $strCalculating;?>
+		</FONT>
+	</CENTER>
+</P>
+-->
 							<?
 								if ($reachedMaxCodes) {
 									echo " You have reached your maximum redemption of $maxCodes sets of tickets.";
@@ -506,6 +527,7 @@ if($isIframe=="true"){
 		if($isIframe!="true"){
 	?>
 	<div data-role="content" class="content-brands iframe-hide">
+<p><FONT SIZE=10><?echo $strCalculating;?></FONT></p>
 		<p class="title"><?=$strPageListHeader?></p>
 		<div class="imagery"><img src="img/shopping-list.png" alt="" /></div>
 		<p class="title title-brands"><?=$strPageBrandsListHeader?></p>

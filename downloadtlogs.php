@@ -61,10 +61,21 @@ processLogFile("http://www.northgatemobile.com/tlogs/TLogMissingPhoneNumbers2013
 //processLogFile("http://www.northgatemobile.com/tlogs/TLOG20130402_3trimmedA.csv");
 //processLogFile("http://www.northgatemobile.com/tlogs/TLOG20130402_3trimmedB.csv");
 
+//processLogFile("http://www.northgatemobile.com/tlogs/TLOG20130403_trimmed1.csv");
+//processLogFile("http://www.northgatemobile.com/tlogs/TLOG20130403_trimmed2.csv");
+//processLogFile("http://www.northgatemobile.com/tlogs/TLOG20130403_trimmed3.csv");
+//processLogFile("http://www.northgatemobile.com/tlogs/TLOG20130403_trimmed4.csv");
+
+//processLogFile("http://www.northgatemobile.com/tlogs/TLogMissingPhoneNumbers20130404.csv");
+//processLogFile("http://www.northgatemobile.com/tlogs/TLOG20130404_trimmed_minusheader1.csv");
+//processLogFile("http://www.northgatemobile.com/tlogs/TLOG20130404_trimmed_minusheader2.csv");
+//processLogFile("http://www.northgatemobile.com/tlogs/TLOG20130404_trimmed_minusheader3.csv");
 
 
 
-echo "hello 1 2 3 4 5";
+
+
+echo "hello 1 2 3 4 6 7";
 
 exit;
 
@@ -153,7 +164,7 @@ exit;
 								(customer_phonenumber,customer_id,transactionid,transaction_date,transaction_time,plucode,quantity,unitprice,amount)
 							VALUES
 								('$customerTelephone','$customerId','$transaction_id','$transaction_date','$transaction_time','$plu_code',$quantity,$unit_price,$amount)";
-				echo "$strSQL<BR>";
+//				echo "$strSQL<BR>";
 				mysql_query($strSQL);
 
 echo "<BR>";

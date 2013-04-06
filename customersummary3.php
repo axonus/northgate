@@ -262,6 +262,10 @@ $language
 
 //echo "\n<BR>Total Spent: $".$totalSpent."<BR>\n";
 
+//$totalSpent /= 2;
+$totalSpent = 0;
+
+
 $realTotalSpent = $totalSpent;		// because later we mod $totalSpent by $goal so that the progress bar doesn't go past 100
 
 
