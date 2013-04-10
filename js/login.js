@@ -1,4 +1,5 @@
 var Northgate = window.Northgate || {}; Northgate.Login = Northgate.Login || {};
+var console = window.console || {}; console.log = console.log || {};
 Northgate.Login = {
     init: function(){
     	//console.log('Login2 init');
@@ -268,8 +269,8 @@ Northgate.Login = {
     		$('#error-messages').removeClass('error-global');
 			var mobileNumber = $('#mobilenumber').val();
 			var actionUrl = summaryPageUrl;
-			console.log('actionUrl:',actionUrl);
-			console.log('summaryPageUrl:',summaryPageUrl);
+			//console.log('actionUrl:',actionUrl);
+			//console.log('summaryPageUrl:',summaryPageUrl);
 			$form.attr('action',actionUrl).submit();
 		}
     	//$form.submit();

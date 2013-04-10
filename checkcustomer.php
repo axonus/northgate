@@ -6,7 +6,7 @@ set_time_limit (60*5);
 
 	function foo($date) {
 		$strSQL = "SELECT DISTINCT (customer_phonenumber) FROM transaction_items WHERE transaction_date = '$date'";
-echo $strSQL;
+		echo $strSQL;
 		if ($results = mysql_query($strSQL)) {
 			while ($row = mysql_fetch_array($results)) {
 				$numbers[] = $row[customer_phonenumber];
@@ -304,8 +304,9 @@ else {
 ////
 	function checkPhoneNumber($mobilenumber) {
 
-		$strSQL = "SELECT * FROM transaction_items WHERE customer_phonenumber='$mobilenumber'";
-		//echo "<BR>strSQL: $strSQL<BR>";
+//		$strSQL = "SELECT * FROM transaction_items WHERE customer_phonenumber='$mobilenumber'";
+$strSQL = "SELECT * FROM transaction_items WHERE customer_phonenumber='$mobilenumber' AND media_line_number=1";
+echo "<BR>strSQL: $strSQL<BR>";
 		if ($results = mysql_query($strSQL)) {
 			echo "<TABLE BORDER=1 CELLSPACING=10>\n";
 			?>
@@ -355,7 +356,7 @@ if (codeIsEligible($plucode)) {
 				//pr($row);
 			}
 			echo "</TABLE>\n";
-echo "<BR><BR>Total Eligible: "."$"."$tot<BR><BR>";
+echo "<BR><BR>Total Eligible: "."$"."$tot<BR><BR>\n";
 		}
 	}
 ////

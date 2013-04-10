@@ -1,4 +1,7 @@
 ﻿<?
+	//phpinfo();
+?>
+<?
 	$m = mysql_connect("localhost", "thomas", "vps99");
 	echo "m = .$m.<BR>";
 	$db = mysql_select_db("thomas_grocery");
@@ -72,10 +75,36 @@ processLogFile("http://www.northgatemobile.com/tlogs/TLogMissingPhoneNumbers2013
 //processLogFile("http://www.northgatemobile.com/tlogs/TLOG20130404_trimmed_minusheader3.csv");
 
 
+//processLogFile("http://www.northgatemobile.com/tlogs/jhosimar_withheader.csv");
 
 
 
-echo "hello 1 2 3 4 6 7";
+//processLogFile("http://www.northgatemobile.com/tlogs/TLOG20130402_1.CSV");
+//processLogFile("http://www.northgatemobile.com/tlogs/TLOG20130402_2.CSV");
+//processLogFile("http://www.northgatemobile.com/tlogs/TLOG20130402_3.CSV");
+//processLogFile("http://www.northgatemobile.com/tlogs/TLOG20130402_4.CSV");
+//processLogFile("http://www.northgatemobile.com/tlogs/TLOG20130402_5.CSV");
+//processLogFile("http://www.northgatemobile.com/tlogs/TLOG20130402_6.CSV");
+
+
+//ini_set("memory_limit","1000M");
+ini_set("memory_limit","2000M");
+//ini_set('max_execution_time', 300); //300 seconds = 5 minutes
+//set_time_limit (60*10);
+set_time_limit (60*30);
+
+//processLogFile("http://www.northgatemobile.com/tlogs/TLOG20130402.CSV");
+//processLogFile("http://www.northgatemobile.com/tlogs/TLOG20130403.CSV");
+//processLogFile("http://www.northgatemobile.com/tlogs/TLOG20130404.CSV");
+//processLogFile("http://www.northgatemobile.com/tlogs/TLogMissingPhoneNumbers20130404.csv");
+//processLogFile("http://www.northgatemobile.com/tlogs/TLOG20130405.CSV");
+//processLogFile("http://www.northgatemobile.com/tlogs/TLOG20130406.CSV");
+//processLogFile("http://www.northgatemobile.com/tlogs/TLOG20130407.CSV");
+
+//processLogFile("http://www.northgatemobile.com/tlogs/TLOG20130408.CSV");
+
+echo "hello 8 9<BR>\n";
+
 
 exit;
 
@@ -132,14 +161,18 @@ exit;
 
 				$quantity		= $cells[26];			// AA (27-1)
 				$unit_price		= $cells[29];			// AD (29-1)
-				$amount			= $cells[30];			// AE (30-1)
+				$amount			= $cells[30];			// AE (31-1) (AE=26+5=31)
+$line_number			= $cells[21];			// V (22-1) (b_LineNumber) (V=22)
+$media_line_number		= $cells[90];			// CM (91-1) (MediaLineNumber) (CM=(26*3)+13=(78)+13=91)
+
 
 
 				//echo "customerTelephone, transaction_id, date_and_time, plu_code, quantity, unit_price, amount<BR>";
 				//echo "$customerTelephone, $transaction_id, $date_and_time, $plu_code, $quantity, $unit_price, $amount<BR>";
 
 //				echo "customerTelephone, transaction_id, transaction_date, transaction_time, plu_code, quantity, unit_price, amount<BR>";
-				echo "$customerTelephone, $transaction_id, $transaction_date, $transaction_time, $plu_code, $quantity, $unit_price, $amount<BR>";
+//				echo "$customerTelephone, $transaction_id, $transaction_date, $transaction_time, $plu_code, $quantity, $unit_price, $amount<BR>";
+//				echo "$customerTelephone, $transaction_id, $transaction_date, $transaction_time, $plu_code, $quantity, $unit_price, $amount, $line_number, $media_line_number<BR>";
 
 
 				$customerId = getCustomerIdFromMobileNumber($customerTelephone);
@@ -160,14 +193,21 @@ exit;
 				//				(customer_phonenumber,customer_id,transactionid,dateandtime,plucode,quantity,unitprice,amount)
 				//			VALUES
 				//				('$customerTelephone','$customerId','$transaction_id','$date_and_time','$plu_code',$quantity,$unit_price,$amount)";
+//				$strSQL = "	INSERT INTO transaction_items
+//								(customer_phonenumber,customer_id,transactionid,transaction_date,transaction_time,plucode,quantity,unitprice,amount)
+//							VALUES
+//								('$customerTelephone','$customerId','$transaction_id','$transaction_date','$transaction_time','$plu_code',$quantity,$unit_price,$amount)";
 				$strSQL = "	INSERT INTO transaction_items
-								(customer_phonenumber,customer_id,transactionid,transaction_date,transaction_time,plucode,quantity,unitprice,amount)
+								(customer_phonenumber,customer_id,transactionid,transaction_date,transaction_time,plucode,quantity,unitprice,amount,line_number,media_line_number)
 							VALUES
-								('$customerTelephone','$customerId','$transaction_id','$transaction_date','$transaction_time','$plu_code',$quantity,$unit_price,$amount)";
+								('$customerTelephone','$customerId','$transaction_id','$transaction_date','$transaction_time','$plu_code',$quantity,$unit_price,$amount,$line_number,$media_line_number)";
 //				echo "$strSQL<BR>";
+?><FONT SIZE=-3><?
+				echo "$strSQL<BR>";
 				mysql_query($strSQL);
+?></FONT><?
 
-echo "<BR>";
+//echo "<BR>";
 
 			}
 			++$i;

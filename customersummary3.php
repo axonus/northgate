@@ -33,6 +33,7 @@
 		$strPageListHeader = "Usa esta lista como ejemplo para comprar tus productos favoritos entre mas de 350 productos participantes.";
 		$strPageBrandsListHeader = "Busque las etiquetas con la imagen de Reyli en estas marcas participantes";
 		$logoutText = "Salir";
+		$strCalculating = "Actualizando base de datos...";
 	}
 	else{
 		$strPageHeader = "How close are you to earning two tickets to see Reyli in concert on May 17 at the Honda Center?";
@@ -42,6 +43,7 @@
 		$strPageListHeader = "Here is a sample shopping list of some of the 350 participating products.";
 		$strPageBrandsListHeader = "Look for shelf tags on these participating brands";
 		$logoutText = "Logout";
+		$strCalculating = "Refreshing data...";
 	}
 ?>
 <?
@@ -222,6 +224,7 @@ $language
 				WHERE
 					transaction_items.customer_id = '$customerId' AND
 					transaction_items.plucode = eligible_skus.plucode
+					AND transaction_items.media_line_number=1
 				ORDER BY
 					transaction_date,
 					transaction_time
@@ -249,32 +252,47 @@ $language
 			*/
 			$dateandtime = "$month-$day-$year";
 
+//transaction_items.plucode
+$plucode = $row[plucode];
+
+
 			$quantity = $row[quantity];
 			$label = $row[label];
 			$amount = $row[amount];
 			echo "\n$amount";
 			$lastAmount = number_format($amount, 2, '.', '');
 			//echo "$dateandtime, $quantity $label, $".$amount."<BR>";
+//echo "$dateandtime, $plucode, $quantity $label, $".$amount."<BR>\n";
 			$totalSpent += $amount;
 		}
 		echo '-->';
+//		echo "\n-->\n";
 	}
 
-//echo "\n<BR>Total Spent: $".$totalSpent."<BR>\n";
+	if(isset($_REQUEST['testval']) && !empty($_REQUEST['testval'])){
+		echo "<!--TESTVAL SET - totalspent = ".$totalSpent."-->\n";
+		$totalOverride = intval($_REQUEST['testval']);
+		$totalSpent = number_format($totalOverride, 2, '.', '');
+		echo "<!--TESTVAL SET - totalspent = ".$totalSpent."-->\n";
+	}
+	
+echo "<!--totalspent = ".$totalSpent."-->\n";
 
 //$totalSpent /= 2;
-$totalSpent = 0;
+//$totalSpent = 0;
 
 
 $realTotalSpent = $totalSpent;		// because later we mod $totalSpent by $goal so that the progress bar doesn't go past 100
 
 
 if ($foo) {
-	$totalSpent = $_amount;
-	$realTotalSpent = $_amount;
+	//$totalSpent = $_amount;
+	//$realTotalSpent = $_amount;
 }
 
 
+//echo "\n<BR>Total Spent: $".$totalSpent."<BR>\n";
+//echo "\n<BR>Real Total Spent: $".$realTotalSpent."<BR>\n";
 
 
 
@@ -305,6 +323,11 @@ if ($totalSpent > $goal) {
 }
 
 
+//echo "\n<BR>Total Spent: $".$totalSpent."<BR>\n";
+//echo "\n<BR>Real Total Spent: $".$realTotalSpent."<BR>\n";
+
+// Make sure there are 2 decimal places (and commas?)
+$totalSpent = number_format($totalSpent, 2);
 
 	$progress = floor((100*$totalSpent)/$goal);
 	//echo "<BR>Progress: $progress%<BR>";
@@ -413,7 +436,8 @@ if($isIframe=="true"){
 			<?displayProgressBar($totalSpent, 270,$strPageTextEarned,$strPageRemaining);?>
 <!-- Thomas, you can use this span element to show either message and can duplicate it if you need to show 2 blocks of text-->
 <?
-	if ($foo) {
+//	if (true) {
+	if (true) {
 		$totalSpent = $realTotalSpent;		// because we moded $totalSpent by $goal, earlier, so retrieve real total from storage var
 
 		$maxTotalSpent = $goal * $maxCodes;		// $300 = (3 * $100)
@@ -485,6 +509,17 @@ if($isIframe=="true"){
 					<p class="details">
 						<span>
 							<? echo $dateandtime; ?>
+<!--04-01-2013-->
+<!--
+<BR>
+<P>
+	<CENTER>
+		<FONT SIZE=5>
+			<?echo $strCalculating;?>
+		</FONT>
+	</CENTER>
+</P>
+-->
 							<?
 								if ($reachedMaxCodes) {
 									echo " You have reached your maximum redemption of $maxCodes sets of tickets.";
@@ -504,6 +539,7 @@ if($isIframe=="true"){
 		if($isIframe!="true"){
 	?>
 	<div data-role="content" class="content-brands iframe-hide">
+<!--<p><FONT SIZE=10><?echo $strCalculating;?></FONT></p>-->
 		<p class="title"><?=$strPageListHeader?></p>
 		<div class="imagery"><img src="img/shopping-list.png" alt="" /></div>
 		<p class="title title-brands"><?=$strPageBrandsListHeader?></p>
@@ -568,13 +604,15 @@ if($isIframe=="true"){
 function displayProgressBar($totalSpent, $barWidth, $strPageTextEarned, $strPageRemaining) {
 	//$totalSpent=isset($_REQUEST['spent']) && !empty($_REQUEST['spent']) ? $_REQUEST['spent'] : $totalSpent;
 	$remaining = 100-$totalSpent;
+$remaining = number_format($remaining, 2);
 ?>
 			<ul id="summary-progress">
 				<li id="progress-applied" style="width:<?echo $totalSpent;?>%;"></li>
 				<li id="progress-labels">
 					<span class="progress-amount progress-applied">$<?echo $totalSpent;?></span>
 					<span class="progress-amount progress-remaining">$<?echo $remaining;?></span>
-					<span class="progress-indicator"><?=$totalSpent;?>%</span>
+<!--					<span class="progress-indicator"><?=$totalSpent;?>%</span>-->
+<span class="progress-indicator"><?=floor($totalSpent);?>%</span>
 					<span class="progress-desc progress-applied"><?=$strPageTextEarned?></span>
 					<span class="progress-desc progress-remaining"><?=$strPageRemaining?></span>
 				</li>
