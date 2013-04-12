@@ -1,0 +1,56 @@
+body,html{
+	width:100%;
+	height:100%;
+	font-family:"Roboto", sans-serif;
+	font-size:16px;
+	background:url(../img/analytics/retina_wood.png) repeat 0 0;
+}
+a{
+	cursor:pointer;
+}
+
+#container-report {
+	width:318px;
+	width:100%;
+	margin:0 auto;
+	min-height:100%;
+}
+	#container-report h2 {
+		display:block;
+		width:176px;
+		height:147px;
+		background:transparent url(../img/analytics/header-analytics-graphic.png) no-repeat 0 0;
+		margin:38px auto;
+	}
+	#container-report ul#report-list {
+		margin:25px auto 0;
+		width:auto;
+		max-width:340px;
+	}
+	#container-report ul#report-list li{
+		margin-bottom:10px;
+	}
+			#container-report ul#report-list dl{
+				width:100%;
+				font-size:18px;
+				overflow:hidden;
+				color:#554c41;
+			}
+				#container-report ul#report-list dt{
+					float:left;
+					font-weight:bold;
+					width:8%;
+				}
+				#container-report ul#report-list dd{
+					float:left;
+					width:92%;
+					
+				}
+	
+	
+	#container-report h2#logo-foundation{
+		width:318px;
+		height:175px;
+		background:transparent url(../img/analytics/footer-ng-logo.png) no-repeat 0 0;
+		margin:38px auto;
+	}
