@@ -15,22 +15,36 @@
 </head>
 <body>
 	<div id="container-report">
-		<h1></h1>
-		<h2>Analytics</h2>
+		<h2 id="logo-analytics"></h2>
+		<ul id="report-list">
 <?
 	include_once "_misc.php";
 	$strSQL = "SELECT * FROM sql_queries";
 	//echo "<BR>$strSQL<BR>";
+	$reportListInt = 0;
 	if ($results = mysql_query($strSQL)) {
 		while ($row = mysql_fetch_array($results)) {
 //			pr($row);
 			//$customerId = $row[id];
+			$reportListInt +=1;
 			?>
-				<a class="btn-report" href="analytics.php?function=runquery&queryid=<?echo $row[id];?>"><?echo $row[label];?></a>
+			<!--
+				<a class="btn-report" href="analytics.php?function=runquery&queryid=<?echo $row[id];?>">
+					<?echo $row[label];?>
+				</a>
+			-->
+			<li>
+				<dl>
+				  <dt><a class="btn-report" href="analytics.php?function=runquery&queryid=<?=$row[id];?>">#<?=$reportListInt?></a></dt>
+					<dd><a class="btn-report" href="analytics.php?function=runquery&queryid=<?=$row[id];?>"><?=$row[label];?></a></dd>
+				</dl>
+			</li>
 			<?
 		}
 	}
-
+?>
+</ul>
+<?
 	if ($function == "runquery") {
 
 		$strSQL = "SELECT * FROM sql_queries WHERE id='$queryid'";
@@ -58,12 +72,45 @@
 	}
 ?>
 
-above func
 
+
+		
+		<h2 id="logo-foundation"></h2>
+	</div>
+</body>
+</html>
+
+
+<style>
+table{
+	border-spacing: 10px;
+	margin: 0 auto;
+	border-collapse:separate;
+}
+	table thead{
+	}
+	table th{
+		color:#296d4f;
+		font-weight:bold;
+		text-transform:capitalize;
+	}
+	table tr{
+		
+	}
+		table tr td{
+			padding:5px 20px 5px 10px;
+			background-color:#d1bd9e;
+			border:1px solid brown;
+			border-width:0 1px 1px 0;
+			border-right-color:#948671;
+			border-bottom-color:#968872;
+		}
+</style>
 <?
 	function runAnalyticsQuery($strSQL, $headers) {
-
+		echo "<div id=\"debug\" style=\"display:none;\">";
 		echo "<BR>$strSQL<BR>";
+		echo "</div>";
 
 		//pr($headers);
 
@@ -112,17 +159,19 @@ above func
 
 		?>
 
-			<TABLE BORDER=1>
+			<table border="0">
 
-				<TH BGCOLOR="CCCCCC">
-
+				<thead>
+				<tr>
 					<?
+						$thCount = 0;
 
 						foreach ($headers AS $header) {
+							$thCount += 1;
 
 							?>
 
-								<TD><CENTER><B><?echo trim($header, "'");?></B></CENTER></TD>
+								<th class="col<?=$thCount?>"><?echo trim($header, "'");?></th>
 
 							<?
 
@@ -130,7 +179,8 @@ above func
 
 					?>
 
-				</TH>
+				</tr>
+				</thead>
 
 		<?
 
