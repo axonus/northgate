@@ -8,6 +8,7 @@ body,html{
 a{
 	cursor:pointer;
 }
+
 input.ui-input-text, textarea.ui-input-text,
 .ui-field-contain input.ui-input-text, .ui-field-contain textarea.ui-input-text, .ui-field-contain .ui-input-search{
 }
@@ -78,3 +79,6 @@ body.ui-mobile-viewport, div.ui-mobile-viewport{
 div.ui-mobile-viewport{
 	overflow:hidden;
 }
+
+
+

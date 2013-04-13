@@ -1,0 +1,32 @@
+.console{
+	display:none;
+	width:300px;
+	height:auto;
+	border:5px solid #0f0;
+	color:#0f0;	
+	padding: 10px;
+	position: fixed;
+	top: 0;
+	right: 0;
+	background: black;
+	font-size: 15px;
+}
+		.console ul{
+			overflow-x: auto;
+		}
+		.console ul li{
+			margin-bottom:20px;
+		}
+			.console ul li span.console-title{
+				clear:both;
+				display:block;
+				font-weight:bold;
+			}
+			.console ul li p.console-value{
+				clear:both;
+				display:block;
+				text-shadow:none;
+				color: yellow;
+				text-shadow:none;
+			}
+	

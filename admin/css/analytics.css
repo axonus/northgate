@@ -75,7 +75,15 @@ table{
 		font-weight:bold;
 		text-transform:capitalize;
 		font-size: 18px;
-		
+		padding-right:10px;
+		width:auto;
+		display: table-cell;
+		float: none;
+	}
+	table th.col1,
+	table th.col2{
+		float:none;
+		width:auto;
 	}
 	table tr{
 		
@@ -91,6 +99,8 @@ table{
 			border-right-color:#948671;
 			border-bottom-color:#968872;
 			font-size:15px;
+			color:#554c41;
+			width:auto;
 		}
 
 	
